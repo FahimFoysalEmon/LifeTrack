@@ -30,6 +30,8 @@ public class AuthService {
             throw new RuntimeException("Email already in use");
         }
 
+        System.out.println();
+
         UserEntity user = UserEntity.builder()
                 .email(request.email())
                 .password(passwordEncoder.encode(request.password()))
